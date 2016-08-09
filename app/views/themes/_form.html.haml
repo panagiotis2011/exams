@@ -1,4 +1,5 @@
 = simple_form_for(@theme, html:{class: 'form-horizontal'}) do |f|
+	= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Διάλεξε μια κατηγορία"}
 	= f.input :title, label: "Tίτλος θέματος"
 	= f.input :description, label: "Περιγραφή θέματος"
 	= f.input :topic_url, label: "Link για το θέμα"

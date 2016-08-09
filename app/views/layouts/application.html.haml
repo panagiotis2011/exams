@@ -1,0 +1,11 @@
+!!!
+%html
+%head
+	%title Θέματα διαγωνισμών
+	= stylesheet_link_tag	 'application', media: 'all', 'data-turbolinks-track' => true
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+%body
+	- Category.all.each do |category|
+		= link_to category.name, themes_path(category: category.name)
+	= yield
