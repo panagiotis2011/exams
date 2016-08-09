@@ -1,0 +1,7 @@
+= simple_form_for(@theme, html:{class: 'form-horizontal'}) do |f|
+	= f.input :title, label: "Tίτλος θέματος"
+	= f.input :description, label: "Περιγραφή θέματος"
+	= f.input :topic_url, label: "Link για το θέμα"
+	= f.input :answer_url, label: "Link για τις απαντήσεις"
+	%br/
+	= f.button :submit

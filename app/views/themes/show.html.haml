@@ -1,0 +1,7 @@
+%h1= @theme.title
+%p= @theme.description
+%p= @theme.topic_url
+
+= link_to "Αρχική", root_path
+= link_to "Επεξεργασία", edit_theme_path(@theme)
+= link_to "Διαγραφή", theme_path(@theme), method: :delete, data: {Confirm: "Είσαι σίγουρος για την διαγραφή;"}
