@@ -1,7 +1,11 @@
-%h1= @theme.title
-%p= @theme.description
-%p= @theme.topic_url
+#themes
+	.theme
+		%h1= @theme.title
+		%p= @theme.description
+		%p= @theme.topic_url
+		%button.btn.btn-default= link_to "Κατέβασε το θέμα", @theme.topic_url
 
-= link_to "Αρχική", root_path
-= link_to "Επεξεργασία", edit_theme_path(@theme)
-= link_to "Διαγραφή", theme_path(@theme), method: :delete, data: {Confirm: "Είσαι σίγουρος για την διαγραφή;"}
+#links
+	= link_to "Αρχική", root_path, class: "btn btn-sm btn-default"
+	= link_to "Επεξεργασία", edit_theme_path(@theme), class: "btn btn-sm btn-default"
+	= link_to "Διαγραφή", theme_path(@theme), method: :delete, data: {Confirm: "Είσαι σίγουρος για την διαγραφή;"}, class: "btn btn-sm btn-default"

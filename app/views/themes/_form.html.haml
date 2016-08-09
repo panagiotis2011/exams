@@ -1,8 +1,8 @@
 = simple_form_for(@theme, html:{class: 'form-horizontal'}) do |f|
-	= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Διάλεξε μια κατηγορία"}
-	= f.input :title, label: "Tίτλος θέματος"
-	= f.input :description, label: "Περιγραφή θέματος"
-	= f.input :topic_url, label: "Link για το θέμα"
-	= f.input :answer_url, label: "Link για τις απαντήσεις"
+	= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Διάλεξε μια κατηγορία"}, input_html: { class: "dropdown-toggle" }
+	= f.input :title, label: "Tίτλος θέματος", input_html: { class: "form-control" }
+	= f.input :description, label: "Περιγραφή θέματος", input_html: { class: "form-control" }
+	= f.input :topic_url, label: "Link για το θέμα", input_html: { class: "form-control" }
+	= f.input :answer_url, label: "Link για τις απαντήσεις", input_html: { class: "form-control" }
 	%br/
 	= f.button :submit
